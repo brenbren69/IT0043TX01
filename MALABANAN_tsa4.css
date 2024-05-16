@@ -1,0 +1,33 @@
+.background {
+    background: url('https://img.freepik.com/premium-photo/brazil-flag-background-color_512300-1080.jpg') no-repeat fixed;
+    background-size: 100% 100%;
+    margin: 0;
+    font-family: Calibri, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: yellow;
+    font-size: 5em;
+}
+
+h2, h3, h4 {
+    color: white;
+}
+
+p {
+    color: white;
+    margin: 10px 0;
+}
+
+.keep-safe {
+    color: yellow;
+    font-weight: bold;
+}
+
+.technology {
+    font-size: 0.8em;
+    color: black;
+    font-style: italic;
+}
