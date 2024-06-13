@@ -1,0 +1,259 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(wallpaper.png);
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+main h1, main h2, main h3, main p, main a {
+    color: #fff;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+main h1 {
+    font-size: 2.5em;
+}
+
+main h2 {
+    font-size: 2em;
+}
+
+main h3 {
+    font-size: 1.8em;
+}
+
+main p {
+    font-size: 1.2em;
+}
+
+.main-content, section {
+    margin-bottom: 40px;
+}
+
+.main-content img,
+section img,
+.character img,
+.gallery-grid img,
+.latest-news img { /* Apply hover effect to all images */
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 80%;
+    height: auto;
+    max-width: 600px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main-content img:hover,
+section img:hover,
+.character img:hover,
+.gallery-grid img:hover,
+.latest-news img:hover { /* Define hover effect */
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific styling for the section */
+#home .main-content h2,
+#story .main-content h2 {
+    text-align: center;
+}
+
+#home img,
+#story img {
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 80%;
+    height: auto;
+    max-width: 600px;
+}
+
+.character-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.character {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.character img {
+    width: 80%;
+    height: auto;
+    max-width: 250px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.latest-news {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.latest-news article {
+    background-color: #fff;
+    color: #000;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 1.3em;
+}
+
+.latest-news article h3 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.latest-news article p {
+    font-size: 1.5em;
+}
+
+.latest-news article:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .character-grid {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .main-content img {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    section img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .character img {
+        width: 90%;
+        max-width: 200px;
+    }
+
+    .latest-news article {
+        padding: 20px;
+        max-width: 90%;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .main-content img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    section img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .character img {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .latest-news article {
+        padding: 15px;
+        max-width: 100%;
+    }
+}
